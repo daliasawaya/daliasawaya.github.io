@@ -1,7 +1,72 @@
 <!DOCTYPE html>
 <html>
-<body>
-<h1>Hello World</h1>
-<p>I'm hosted with GitHub Pages.</p>
-</body>
-</html>
+  <head>
+    <meta charset="utf-8">
+	<link href="styles/style.css" rel="stylesheet" type="text/css">
+    <title>Questionnaire</title>
+  </head>
+  
+  <body>
+	
+    <h1> <img src="images/CNCO_logo.png" width="250" height="100" style="float: left"> Website Survey</h1>
+	<form id="myform" action="index.php" >
+	<br>
+	<br>
+	
+
+	<h2>Share with us your opinion of the <a href="https://www.cncomusic.com/" style="color:rgb(7, 95, 95)" >CNCO</a> official website!</h2>	
+	<br>
+	<br>
+
+    <a href="https://www.cncomusic.com/"><img src="images/CNCO_website_ss.PNG" alt="https://www.cncomusic.com/" width="920" height="470" ></a>
+	<br>
+	<br>
+
+
+	<div class="question">
+	    <h3> Q1) Have you heard of CNCO before visiting this website? </h3>
+         <input type="radio" value="Yes" name='foo'>Yes<br>
+	        <input type="radio" value="No" name='foo' >No<br>
+	        <input type="radio" value="I'm not sure" name='foo'>I'm not sure<br>
+	        <!-- <p>First name: <input type="text" name="firstname"></p> -->
+	        <!-- <p>Last name: <input type="text" name="lastname"></p> -->
+	        <br>
+    	<br>
+		
+		<h3> What you like </h3>
+		I like:<br>
+		<input type="checkbox" name="Color" value="Red">Red<br>
+		<input type="checkbox" name="Color" value="Green">Green<br>
+		<input type="checkbox" name="Color" value="Blue">Blue<br>
+		<br>
+        <br>
+		
+		
+		<h3> Q4) On a scale of 1-5, (5 being the best) how would you rate this website?</h3>
+		<select id="favorite">
+			<option value=" " selected=" "> </option>
+			<option value="1">1</option>
+			<option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+		</select>
+	</div>
+		
+    <h3> Q5) Enter any comments you have below: </h3>
+    	<textarea rows="8" cols="40"></textarea>
+			
+	<br>
+	<br>
+    <br>
+    <br>
+	
+    <div class="vertical-center">
+	    <button id="submitButton" type="button" class="block"> SUBMIT </button>
+    </div>
+		
+	<p id="signature" >@2021 by DVelez</p>	
+	
+	</form>
+  </body>
+</html> 

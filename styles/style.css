@@ -1,0 +1,83 @@
+html {
+  background-color: rgb(165, 248, 248); 
+  ;
+}
+
+body {
+  text-align: center;
+}
+
+h1 {
+	font-size: 67px;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+	margin: 30px 375px;
+	color: #30292d; 
+}
+
+h2 {
+  font-size: 30px;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  margin: 0 auto;
+	color: #30292d; 
+}
+
+h3 {
+  font-size: 25px;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  margin: 10px auto;
+	color: #30292d; 
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+p {
+  color: #30292d;
+  text-align: center;
+}
+
+table {
+	border: 1px solid black;
+	background-color: #f1f1c1;
+}
+
+/* Defining styling for a specific element type - each question */
+.question {
+  font-size: 20px;
+  color: #30292d;
+  margin: 30px;
+  padding: 30px;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+/* Defining styling for a specific element type - large block buttons */
+.block {
+  display: block;
+  width: 120px;
+  border: none;
+  background-color: rgb(7, 95, 95);  
+  color: whitesmoke;
+  padding: 14px 28px;
+  font-size: 16px;
+  cursor: pointer;
+  text-align: center;
+  border-radius: 8px;
+}
+
+.vertical-center {
+  margin: 10px;
+  position: absolute;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+/* Defining styling for a specific element with an id */
+#signature {
+  text-align: right;
+  color:#30292d;
+  font-style: italic;
+  font-size: 100%;
+}
