@@ -1,0 +1,100 @@
+
+html {
+    background-color: #d0b8ec; 
+  }
+  
+  body {
+    text-align: center;
+  }
+
+/* Style the tab */
+.tab {
+    overflow: hidden;
+    background-color: #9c56eb;
+  }
+  
+  /* Style the buttons that are used to open the tab content */
+  .tab button {
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 20px;
+    color: #30292d;
+  }
+  
+  /* Change background color of buttons on hover */
+  .tab button:hover {
+    background-color: #d0b8ec;
+  }
+  
+  /* Create an active/current tablink class */
+  .tab button.active {
+    background-color: #9c56eb;
+  }
+  
+  /* Style the tab content */
+  .tabcontent {
+    display: none;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    padding: 6px 12px;
+    border-top: none;
+  }
+
+  .topnav-right {
+    float: right;
+  }
+
+  h1 {
+	font-size: 20px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+	margin: 15px 15px;
+	color: #30292d; 
+}
+
+h2 {
+	font-size: 70px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+	margin: 15px 15px;
+    color: #9c56eb;
+    text-align: center;
+}
+
+h3 {
+	font-size: 28px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+	margin: 15px 15px;
+    color: #30292d;
+    text-align: center;
+}
+
+p{
+    font-size: 20px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+	margin: 15px 15px;
+    color: #30292d;
+    text-align: center;
+}
+
+.block {
+
+  border: none;
+  text-align: center;
+  background-color: #9c56eb;  
+  color: whitesmoke;
+  padding: 14px 28px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 8px;
+}
+
+#signature {
+    text-align: right;
+    color:#30292d;
+    font-style: italic;
+    font-size: 100%;
+  }

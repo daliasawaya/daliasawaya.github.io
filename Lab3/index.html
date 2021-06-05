@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link href="styles/style.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+
+<!-- Tab links, each one with an onclick event associated with it -->
+
+
+<div class="tab">
+  <button class="tablinks" onclick="openInfo(event, 'Set Restrictions')">Set Restrictions</button>
+  <button class="tablinks" onclick="openInfo(event, 'See Products')">See Products</button>
+  <button class="tablinks" onclick="openInfo(event, 'Your Cart')">Your Cart</button>
+  <div class="topnav-right">
+    <h1> velez@groceries.com </h1>
+  </div>
+</div>
+
+<h2>VELEZ GROCERIES</h2>
+
+
+<div class="yo">
+<h3>
+  Follow these steps for an easy experience with Velez Groceries:
+</h3>
+<br>
+  <p>
+  1. Click 'Set Restrictions' and set your grocery restrictions
+  <br>
+  <br>
+  2. Click 'Products' and choose products to buy based on your set restrictions
+  <br>
+  <br>
+  3. Click 'Your Cart' to see total price of products chosen
+  <br>
+  </p>
+</div>
+
+
+<!-- Tab content -->
+
+<div id="Set Restrictions" class="tabcontent">
+  <h3>Set your grocery restrictions</h3>
+  <br>
+  <p>
+	Set a restriction:
+  </p>
+	<select id="dietSelect" name="dietSelect" onchange="populateListProductChoices(this.id, 'displayProduct')">
+	<option value=""></option>
+	<option value="Lactose Free">Lactose Free</option>
+    <option value="Nut Free">Nut Free</option>
+    <option value="Organic">Organic</option>
+    <option value="Dog Food">Dog Food</option>
+    <option value="Baby Food">Baby Food</option>
+    <option value="None">None</option>
+	</select>
+  <br>
+  <br>
+  <p>
+  Then click 'Products' and choose products to buy based on your set restrictions
+</p>
+  <br>
+</div>
+
+
+<div id="See Products" class="tabcontent">
+  <h3>Here are the products we carry based on your set restrictions</h3>
+ 
+  <br>
+  <p>
+	Choose items to buy:
+  </p>
+	 <div id="displayProduct"></div>
+    <br>
+	 <button id="addCart" type="button" class="block" onclick="selectedItems()">
+		Add chosen products to your cart.
+	</button>
+  <br>
+  <br>
+  <p>
+    Then click 'Your Cart' to see total price of products chosen
+  </p>
+</div>
+
+<div id="Your Cart" class="tabcontent">
+  <h3>Your Cart</h3>
+  
+  <div id="displayCart"></div>
+</div>
+
+<script src="scripts/groceries.js"></script>
+<script src="scripts/main.js"></script>
+
+<br>
+<h1 id="signature" >@2021 by DVelez </h1>
+
+</body>
+</html>
+
