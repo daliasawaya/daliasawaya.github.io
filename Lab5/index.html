@@ -1,0 +1,215 @@
+<!-- This file contains a few elements adapted from the online tutoral -->
+<!-- on Bootstrap 4 as found here: https://www.w3schools.com/bootstrap4/default.asp -->
+<!-- as well as JQuery found here: https://www.w3schools.com/jquery/default.asp -->
+
+<!-- Images source: -->
+<!-- The two icons come from this bank of icons: https://icons8.com/icons.  I used the free downloadable ones.-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- The head should contain an appropriate title for your site -->
+<head>
+    <title>Fares Eye Centre</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Style sheet (CSS) and JavaScript scripts necessary to use Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+
+    <!-- Style sheet (CSS) and JavaScript scripts necessary to use JQuery as well as JQueryUI library -->
+    <!-- which is built on top of JQuery and offers additional possibilities -->
+    <!-- For example, JQuery UI has a datepicker which is popular and that we can use -->
+    <link href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.9.2/themes/excite-bike/jquery-ui.css" rel="stylesheet" type="text/css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+    <!-- Your own script -->
+    <script src="scripts/service.js"></script>
+
+    <!-- Your own additional style sheet -->
+    <link href="styles/style.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+
+<!-- Using the collapsible Navbar, so we see the hamburger menu icon -->
+<!-- It really has become a standard. -->
+<!-- As your page is a vertical page (Module 4 requirement), you mus use the navbar -->
+<!-- to just jump to parts of the page. What I put as First/Second/Third here would -->
+<!-- be sections in your page. -->
+<nav class="navbar navbar-expand-md bg-info navbar-light">
+   <!-- <a class="navbar-brand" href="#">Navbar</a>-->
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="collapsibleNavbar">
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link" href="#collapsibleNavbar"><img src="images/home.png.png" alt="logo" style="width:30px;">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#first"><img src="images/eye.png.png" alt="logo" style="width:30px;">Our Services</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#second"><img src="images/team.png.png" alt="logo" style="width:30px;">Our Team</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#third"><img src="images/calendar.png.png" alt="logo" style="width:30px;">Book an Appointment</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+<br>
+
+<div class="container" id="collapsibleNavbar">
+<div class="text-dark text-center siz"><h1> Fares Eye Centre</h1></div>
+<br>
+<div class="text-muted text-center"><h4> Complete Eye Care - Quality Eye Wear</h4></div>
+</div>
+
+<br>
+
+
+<!-- Just arbitrary divisions to see the link from the NavBar -->
+<!-- Also, notice the use of the icon repeated from the menu to add grouping -->
+<div class="row d-flex justify-content-center" id="first">
+
+    <div class="text-info" style="padding: 1rem 5rem;"><h1><img src="images/eye.png.png" alt="logo" style="width:50px;">Our Services</h1></div>
+
+    <div class="text-dark" style="padding: 1rem 18rem;"><h2> Eye Exams:</h2></div>
+
+        <div class="col-sm-6 card" style="width: 20rem; border:none;">
+            <img src="images/handMachine.PNG" width="65" height="220" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h3 class="card-title ">Full Eye Exam</h3>
+              <h4 class="price">160$</h4>
+              <p class="card-text text-muted">Vision and eye health assessment for adults aged 18 and up. Includes Auxillary Testing.</p>
+            </div>
+        </div>
+
+        <div class="col-sm-6 card" style="width: 20rem; border:none;">
+            <img src="images/kid.PNG" width="65" height="220" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h3 class="card-title">Children Eye Exam</h3>
+              <h4 class="price">60$</h4>
+              <p class="card-text text-muted">Vision and eye health assessment for children aged 17 and under.</p>
+            </div>
+        </div>
+
+        <div class="col-sm-6 card" style="width: 20rem; border:none;">
+            <img src="images/redeye.PNG" width="65" height="220" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h3 class="card-title">Partial Eye Exam</h3>
+              <h4 class="price">75$</h4>
+              <p class="card-text text-muted">Urgent eye care such as: red eye treatment, dry eye treatment, cosmetic lid surgeriesn and more...</p>
+            </div>
+        </div>
+
+        <div class="mt-3"></div>
+
+        <div class="text-dark" style="padding: 1rem 18rem;"><h2> Fittings:</h2></div>
+
+        <div class="col-sm-6 card" style="width: 20rem; border:none;">
+            <img src="images/contLens.PNG" width="65" height="220" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h3 class="card-title">Contact Lens Fitting</h3>
+              <h4 class="price">50$</h4>
+              <p class="card-text text-muted">Our doctors will make sure you have the best contact lenses for your eyes. 
+                  We carry soft lenses, hard lenses, cosmetic coloured lenses and even overnight vision correcting lenses! </p>
+            </div>
+        </div>
+
+        <div class="col-sm-6 card" style="width: 20rem; border:none;">
+            <img src="images/manGlasses.PNG" width="65" height="220" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h3 class="card-title">Glasses/Sunglasses Fitting</h3>
+              <h4 class="price">40$</h4>
+              <p class="card-text text-muted">Our doctors are here to help you choose the perfect glasses. 
+                  From fitting you with the best possible product, to choosing that perfect frame and high quality lenses.</p>
+            </div>
+        </div> 
+
+   <!-- <h3><img src="images/peigne.png" alt="logo" style="width:40px;">Services</h3>
+    <p>Display text 1 </p>
+    <p>Display text 2 </p>
+    <p>Display text 3 </p>
+    <p>Display text 4 </p>
+    <p>Display text 5 </p>
+    <p>Display text 6 </p> -->
+</div>
+
+<br>
+
+<div class="row d-flex justify-content-center" id="second">
+
+        <div class="text-info" style="padding: 1rem 5rem;"><h1><img src="images/team.png.png" alt="logo" style="width:50px;">Our Team</h1></div>
+    
+       <!-- <div class="text-dark" style="padding: 1rem 18rem;"><h2> Eye Exams:</h2></div> -->
+    
+            <div class="col-sm-6 card" style="width: 20rem; border:none;">
+                <img src="images/joe.PNG" width="65" height="260" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h3 class="card-title ">Dr. Faten Fares</h3>
+                  <h4 class="price">Optometrist</h4>
+                  <p class="card-text text-muted">Dr. Fares has been practicing optometry since 1999. She has been in her private clinic since 2005, 
+                      where she takes pride in her profession. She makes sure her exams are 
+                      thorough and her results are carefully communicated to the patients. </p>
+                </div>
+            </div>
+    
+            <div class="col-sm-6 card" style="width: 20rem; border:none;">
+                <img src="images/sal.PNG" width="65" height="260" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h3 class="card-title">Dr. Saleh Yaacoub</h3>
+                  <h4 class="price">Optometrist</h4>
+                  <p class="card-text text-muted">Dr. Yaacoub has been practicing optometry at Fares Eye Centre since 2020. He pays great attention 
+                      to detail and makes sure each patient leaves the exam fully informed. He is currently accepting new patients.</p>
+                </div>
+            </div>
+    
+            <div class="col-sm-6 card" style="width: 20rem; border:none;">
+                <img src="images/anwar.PNG" width="65" height="260" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h3 class="card-title">Anwar Fares</h3>
+                  <h4 class="price">Optician</h4>
+                  <p class="card-text text-muted">Anwar is our licensed and registered Optician. He has been working in the Optical industry since 2004. 
+                      He’s here to help you through the full selection process. From fitting you with the best possible product, 
+                      to choosing that perfect frame, and of course, the perfect lenses.</p>
+                </div>
+            </div>
+    
+            <!-- <div class="text-dark" style="padding: 1rem 18rem;"><h2> Fittings:</h2></div> -->
+    
+            <div class="col-sm-6 card" style="width: 20rem; border:none;">
+                <img src="images/me.PNG" width="65" height="260" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h3 class="card-title">Dalia Sawaya</h3>
+                  <h4 class="price">Receptionist</h4>
+                  <p class="card-text text-muted">Dalia is our office receptionist with a big smile. She enjoys booking your 
+                      appointments and making you feel welcome when you arrive at Fares Eye Centre. 
+                      Do not hesitate calling Dalia for your next appointment. </p>
+                </div>
+            </div>
+    
+           
+   <!-- <h3><img src="images/tiger.png" alt="logo" style="width:40px;">Second Item</h3>
+    <p>Display text 1 </p>
+    <p>Display text 2 </p>
+    <p>Display text 3 </p>
+    <p>Display text 4 </p>
+    <p>Display text 5 </p>
+    <p>Display text 6 </p>-->
+</div>
+
+<!-- This section contains elements to be validated -->
+<!-- Refer to the JavaScript file, where JQuery is used to listen to those inputs using the ids -->
+    <div class="text-info" style="padding: 1rem 5rem;"><h1><img src="images/calendar.png.png" alt="logo" style="width:50px;">Book an Appointment</h1></div>
+<div class="container" id="third"> 
+    <p>Date: <input type="text" id="dateInput"></p>
+    <p>Phone Number Example <input value="(1234)" type="text" id="phone"></p>
+    <p>Credit Card: <input type="text" id="debit" title="We ask for your credit card number in case of no-show, 20$ will be charged."></p>
+</div>
+
+</body>
+</html>
