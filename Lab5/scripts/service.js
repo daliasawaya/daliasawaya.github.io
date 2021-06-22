@@ -1,5 +1,5 @@
 // Function to verify that the phone number is correct.
-// Here, I validate for (12345), but you have to change that for a phone validation
+// (999) 999-9999
 // Tutorials on Regular expressions
 // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions
 // https://flaviocopes.com/javascript-regular-expressions/
@@ -7,9 +7,29 @@
 // or numbers
 function validatePhone(txtPhone) {
     var a = document.getElementById(txtPhone).value;
-    // This filter asks for something like (12345), so parentheses with any number (at least 1)
+    // This filter asks for something like (123) 999-9999, so parentheses with any number (at least 1)
     // of digits
-    var filter = /^(\([-+]?[0-9]+)\)$/;
+    var filter = /([0-9]{10})|(\([0-9]{3}\)\s+[0-9]{3}\-[0-9]{4})/;
+    if (filter.test(a)) {
+        return true;
+    }
+    else {
+        return false;
+    }
+}
+
+// Function to verify that the credit card number is correct.
+// 9999 9999 9999 9999
+// Tutorials on Regular expressions
+// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions
+// https://flaviocopes.com/javascript-regular-expressions/
+// Regular expressions can get complex, you can think in terms of a series of characters
+// or numbers
+function validateCreditCard(txtCreditCard) {
+    var a = document.getElementById(txtCreditCard).value;
+    // This filter asks for something like 9999 9999 9999 9999, so parentheses with any number (at least 1)
+    // of digits
+    var filter = /([0-9]{16})|([0-9]{4}\s+[0-9]{4}\s+[0-9]{4}\s+[0-9]{4})/;
     if (filter.test(a)) {
         return true;
     }
@@ -34,6 +54,17 @@ function disableDates(date) {
     return [ unavailableDates.indexOf(string) === -1 ]
 }
 
+function disableDatesFaten(date) {
+    // Sunday is Day 0, disable all Sundays
+    
+    if (date.getDay() === 6)
+        return [false];
+    if (date.getDay() === 3)
+        return [false];
+    var string = jQuery.datepicker.formatDate(setDateFormat, date);
+    return [ unavailableDates.indexOf(string) === -1 ]
+}
+
 
 // HERE, JQuery "LISTENING" starts
 $(document).ready(function(){
@@ -44,13 +75,47 @@ $(document).ready(function(){
     // The "error" class in style.css defines yellow background and red foreground
     $("#phone").on("change", function(){
         if (!validatePhone("phone")){
-            alert("Wrong format for phone");
-            $("#phone").val("(xxxx)");
+            alert("Make sure the format looks like this: (999) 999-9999");
+            $("#phone").val("");
             $("#phone").addClass("error");
         }
         else {
             $("#phone").removeClass("error");
         }
+    });
+
+    // credit card validation, it calls validateCreditCard
+    // and also some feedback as an Alert + putting a value in the input that shows the format required
+    // the "addClass" will use the class "error" defined in style.css and add it to the phone input
+    // The "error" class in style.css defines yellow background and red foreground
+    $("#creditCard").on("change", function(){
+        if (!validateCreditCard("creditCard")){
+            alert("Make sure the format looks like this: 9999 9999 9999 9999");
+            $("#creditCard").val("");
+            $("#creditCard").addClass("error");
+        }
+        else {
+            $("#creditCard").removeClass("error");
+        }
+    });
+
+
+    $("#faten").on("change", function(){
+        $( "#dateInput" ).datepicker('option',{
+            beforeShowDay: function(date) {
+                var day = date.getDay();
+                return [(day != 0 && day != 6 && day != 3),  ''];
+            }
+        });
+    });
+
+    $("#saleh").on("change", function(){
+        $( "#dateInput" ).datepicker('option',{
+            beforeShowDay: function(date) {
+                var day = date.getDay();
+                return [(day != 0 && day != 5),  ''];
+            }
+        });
     });
 
     // To change the style of the calender, look in jqueryui.com, under Themes, in the ThemeRoller Gallery
@@ -60,15 +125,12 @@ $(document).ready(function(){
 
     // Also, here is a good tutorial for playing with the datepicker in https://webkul.com/blog/jquery-datepicker/
     // Datepicker is also documented as one of the widgets here: https://api.jqueryui.com/category/widgets/
-    $( "#dateInput" ).datepicker(
+   $( "#dateInput" ).datepicker(
         {
-            dateFormat: setDateFormat,
-            // no calendar before June 1rst 2020
-            minDate: new Date('06/01/2020'),
-            maxDate: '+4M',
-            // used to disable some dates
-            beforeShowDay: $.datepicker.noWeekends,
-            beforeShowDay: disableDates
+            beforeShowDay: function(date) {
+                var day = date.getDay();
+                return [(day != 0 && day != 1 && day != 2 && day != 3 && day != 4 && day != 5 && day != 6),  ''];
+            }
         }
     );
 
@@ -93,5 +155,8 @@ $(document).ready(function(){
         }
     });
 
+    $("#bookApp").on("click", function(){
+        confirm("Great! We have booked your requested appointment!");
+    });
 
 });
